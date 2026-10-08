@@ -1,4 +1,9 @@
-jour = int(input("Indiquer nb jour:\n>"))
-heure = int(input("Indiquer nb heure:\n>"))
-minute = int(input("Indiquer nb minutes:\n>"))
-print(f'Les nombres de minutes écoulé depuis le début du mois est : {jour*24*60+heure*60+minute}')
+minutes = int(input("Indiquer nb minute depuis le debute du mois:\n>"))
+
+heure = minutes//60
+jour = heure//24
+
+heure -= jour*24
+minutes -= jour*24*60 + heure*60
+
+print(f'La date du mois en cours est : {jour}j, {heure}h et {minutes}min')
