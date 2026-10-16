@@ -9,7 +9,7 @@ while loop:
         if heure_fin < heure_deb: 
             print("L'heure de fin est avant l'heure de début")
             raise ValueError
-        if not(1 <= heure_deb <= 24) or not(1 <= heure_fin <= 24): 
+        if not(0 <= heure_deb <= 24) or not(0 <= heure_fin <= 24): 
             print("L'heure doit etre compris entre 1 et 24")
             raise ValueError
         loop = False
@@ -20,7 +20,7 @@ somme = 0
 i1 = 0
 i2 = 0
 while heure_deb != heure_fin:
-    if 1 <= heure_deb <= 7 or 17 <= heure_deb <= 24:
+    if 0 <= heure_deb < 7 or 17 <= heure_deb <= 24:
         somme += 1
         i1 += 1
     else:
